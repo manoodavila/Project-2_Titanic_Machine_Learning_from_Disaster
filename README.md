@@ -1,10 +1,30 @@
 # Titanic Survival Analysis
 
-Este projeto realiza uma análise dos dados dos sobreviventes do Titanic para tentar responder à pergunta: "Quem é mais provável sobreviver?"
+Este projeto realiza uma análise dos dados dos sobreviventes do Titanic para tentar responder à pergunta: "Quem é mais provável sobreviver?". Escrevi o código paticipando da competição "Titanic - Machine Learning from Disaster" no Kaggle
 
 ## Descrição
 
-O código analisa os dados dos passageiros do Titanic e utiliza um modelo de machine learning para prever a sobrevivência. O modelo RandomForestClassifier é utilizado para prever a sobrevivência dos passageiros no conjunto de teste.
+Este projeto realiza uma análise detalhada dos dados dos passageiros do Titanic para prever a probabilidade de sobrevivência de novos passageiros com base em características específicas. O código é dividido em várias etapas principais, que são descritas a seguir:
+
+1. **Importação das Bibliotecas Necessárias:**
+   - O código começa importando bibliotecas essenciais para análise e modelagem de dados. A biblioteca NumPy é usada para operações matemáticas e manipulação de arrays, enquanto a pandas é utilizada para leitura e processamento dos dados. A biblioteca scikit-learn fornece ferramentas para construir e treinar o modelo preditivo, especificamente o classificador RandomForest.
+
+2. **Carregamento dos Dados:**
+   - Os dados são carregados a partir de arquivos CSV, um contendo informações sobre os passageiros que sobreviveram e outro com dados sobre os passageiros do conjunto de teste. Esses dados incluem várias características dos passageiros, como classe, sexo, número de irmãos/cônjuges a bordo, e número de pais/filhos a bordo.
+
+3. **Análise Exploratória dos Dados:**
+   - O código realiza uma análise básica para determinar a taxa de sobrevivência entre mulheres e homens. Essa análise ajuda a entender as diferenças nas taxas de sobrevivência entre os dois grupos e fornece uma visão inicial sobre os dados.
+
+4. **Preparação dos Dados para Modelagem:**
+   - Antes de treinar o modelo, os dados são preparados e transformados. A variável de resposta (se o passageiro sobreviveu ou não) é extraída do conjunto de treinamento. Em seguida, as características selecionadas para a modelagem, como a classe do passageiro, o sexo, e o número de familiares a bordo, são convertidas em variáveis numéricas usando a codificação one-hot. Isso é necessário porque os modelos de machine learning trabalham melhor com dados numéricos.
+
+5. **Construção e Treinamento do Modelo:**
+   - Um modelo de RandomForest é criado e treinado com os dados preparados. O RandomForest é um tipo de ensemble learning que utiliza múltiplas árvores de decisão para melhorar a precisão das previsões. O modelo é ajustado com base nas características dos passageiros e na variável de resposta.
+
+6. **Previsão e Geração do Arquivo de Submissão:**
+   - Após o treinamento do modelo, ele é utilizado para prever a sobrevivência dos passageiros no conjunto de teste. As previsões são então combinadas com os IDs dos passageiros e salvas em um arquivo CSV, que pode ser submetido para avaliação ou usado para análise adicional.
+
+Essas etapas juntas permitem que o projeto forneça uma análise compreensiva dos dados dos passageiros do Titanic e gere previsões úteis sobre a sobrevivência de novos passageiros.
 
 ## Arquivos
 
